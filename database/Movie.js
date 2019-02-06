@@ -7,7 +7,6 @@ const movieSchema = new mongoose.Schema({
   id: { type: Number, index: { unique: true } },
   title: String,
   releaseDate: Date,
-  reviews: Array,
 });
 
 const Movie = mongoose.model('Movie', movieSchema);
@@ -17,7 +16,8 @@ const find = () => {
 };
 
 const create = (movie) => {
-
+  const toSave = new Movie(movie);
+  return toSave.save();
 };
 
 module.exports = Movie;

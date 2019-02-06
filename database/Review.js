@@ -20,7 +20,8 @@ const find = () => {
 };
 
 const create = (review) => {
-
+  const toSave = new Review(review);
+  return toSave.save();
 };
 
 module.exports = Review;
