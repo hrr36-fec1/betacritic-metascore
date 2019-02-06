@@ -1,10 +1,11 @@
 # Project Name
+BetaCritic
 
-> Project description
+BetaCritic is a recreation of the popular Metacritic movie rating website. BetaCritic was created as an education project to learn more about app development and tools, including (but not limited to) React, D3, MongoDB, Express, and Jest.
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
+  - https://github.com/hrr36-fec1/hrr36-fec-tyler-widget
   - https://github.com/teamName/repo
   - https://github.com/teamName/repo
   - https://github.com/teamName/repo
@@ -36,4 +37,3 @@ From within the root directory:
 npm install -g webpack
 npm install
 ```
-
