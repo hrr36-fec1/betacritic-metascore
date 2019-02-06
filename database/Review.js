@@ -17,7 +17,7 @@ const reviewSchema = new mongoose.Schema({
 const Review = mongoose.model('Review', reviewSchema);
 
 const search = (movieId) => {
-  console.log('in here');
+  movieId = Number(movieId);
   return Review.find({ movieId });
 };
 
