@@ -12,6 +12,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(`${__dirname}/../public`)));
 
+app.get('/api/movies/:movieId/reviews', (req, res) => {
+  console.log(req.params.movieId);
+  Review.search(req.params.movieId)
+  .then(data => res.json(data));
+});
+
 app.listen(PORT, () => {
   console.log(`Connected to Express on port ${PORT}`);
 });
