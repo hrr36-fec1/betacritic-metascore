@@ -34,14 +34,15 @@ const generateReviews = async (movies) => {
     const numReviews = Math.floor(Math.random() * 50) + 25;
     for (let j = 0; j < numReviews; j += 1) {
       const author = `${faker.name.firstName()} ${faker.name.lastName()}`;
-      const movie = { id: movies.ids[i], title: movies.titles[i] };
+      const movieId = Number(movies.ids[i]);
+      const movieName = movies.titles[i];
       const publication = faker.company.companyName();
       const score = Math.floor(Math.random() * 100);
       const publishDate = faker.date.between(movies.years[i], '2019-01-01');
       const body = faker.lorem.paragraphs();
       const author_movie = `${author}_${movies.titles[i]}`; // eslint-disable-line camelcase
       movieReview.push({
-        author, movie, publication, score, publishDate, body, author_movie,
+        author, movieId, movieName, publication, score, publishDate, body, author_movie,
       });
     }
     movieReviews.push(movieReview);

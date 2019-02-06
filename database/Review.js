@@ -5,7 +5,8 @@ mongoose.Promise = global.Promise;
 
 const reviewSchema = new mongoose.Schema({
   author: String,
-  movie: Object,
+  movieId: Number,
+  movieName: String,
   publication: String,
   score: Number,
   publishDate: Date,
@@ -15,8 +16,9 @@ const reviewSchema = new mongoose.Schema({
 
 const Review = mongoose.model('Review', reviewSchema);
 
-const find = () => {
-
+const search = (movieId) => {
+  console.log('in here');
+  return Review.find({ movieId });
 };
 
 const create = (review) => {
@@ -25,5 +27,5 @@ const create = (review) => {
 };
 
 module.exports = Review;
-module.exports.find = find;
+module.exports.search = search;
 module.exports.create = create;
