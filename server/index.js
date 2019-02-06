@@ -10,7 +10,7 @@ const PORT = 4444;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(`${__dirname}/../react-client/dist`)));
+app.use(express.static(path.join(`${__dirname}/../public`)));
 
 app.listen(PORT, () => {
   console.log(`Connected to Express on port ${PORT}`);
