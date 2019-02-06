@@ -6,9 +6,9 @@ BetaCritic is a recreation of the popular Metacritic movie rating website. BetaC
 ## Related Projects
 
   - https://github.com/hrr36-fec1/hrr36-fec-tyler-widget
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/hrr36-fec1/merary-banner-component
+  - https://github.com/hrr36-fec1/hrr36-fec1-britt-widget
+  - https://github.com/hrr36-fec1/hrr36-fec1-bill-widget
 
 ## Table of Contents
 
