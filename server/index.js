@@ -6,7 +6,7 @@ const Movie = require('../database/Movie.js');
 const Review = require('../database/Review.js');
 
 const app = express();
-const PORT = 3000;
+const PORT = 4444;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
