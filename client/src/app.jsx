@@ -1,7 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ReviewList from './components/ReviewList.jsx';
+import Metascore from './components/Metascore.jsx';
 
-ReactDOM.render(
-  <h1>Hello World with JSX, Babel and Webpack</h1>,
-  document.getElementById("metascore")
-);
+class App extends React.Component {
+
+  render() {
+    return (
+      <div>
+        <Metascore />
+        <ReviewList />
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById("metascore"));
