@@ -4,7 +4,7 @@ import ReviewListItem from './ReviewListItem.jsx';
 const ReviewList = (props) => {
 
   return (
-    <div>
+    <div className="review_list">
       <div className="subsection_title">
         <a href="#">Critic Reviews</a>
       </div>
