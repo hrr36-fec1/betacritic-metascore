@@ -7,7 +7,7 @@ const ChartWrapper = (props) => {
       <div className={`chart ${props.type}`}>
         <div className={`bar ${props.type}`}></div>
         <div className="text oswald">
-          <div className="label fl"></div>
+          <div className="label fl">{props.type}:</div>
           <div className="count fr"></div>
           <div className="clr"></div>
         </div>

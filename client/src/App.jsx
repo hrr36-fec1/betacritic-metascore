@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'normalize.css';
+
 import ReviewList from './components/ReviewList.jsx';
 import Metascore from './components/Metascore.jsx';
 
@@ -17,7 +19,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="fxdcol gu4">
+      <div className="fxdcol gu4 reviews">
         <Metascore scores={this.state.scores}/>
         <ReviewList reviews={this.state.reviews}/>
       </div>
