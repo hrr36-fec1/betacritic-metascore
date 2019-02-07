@@ -12,7 +12,7 @@
     "lint": "eslint --env browser,jest \"**/*.js\"",
     "db:setup": "node utils/seed.js",
     "test-dev": "jest --watchAll --detectOpenHandles --forceExit",
-    "test": "jest --forceExit"
+    "test": "jest"
   },
   "dependencies": {
     "@webpack-cli/init": "^0.1.3",
