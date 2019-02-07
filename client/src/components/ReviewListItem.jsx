@@ -16,7 +16,7 @@ const ReviewListItem = (props) => {
           <span className="author">
             <a href="#">Author</a>
           </span>
-          <div class="date pad_top_half"></div>
+          <div className="date pad_top_half"></div>
         </div>
       </div>
       <div className="summary_wrap pad_top_half">
