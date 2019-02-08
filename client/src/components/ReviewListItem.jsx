@@ -5,7 +5,7 @@ const ReviewListItem = (props) => {
   var options = { month: 'short', day: 'numeric', year: 'numeric' };
   let date = new Date(props.review.publishDate).toLocaleDateString("en-US", options)
 
-  let reaction = props.review.score > 60 ? "positive" : props.review.score > 40 ? "mixed" : "negative";
+  let reaction = props.review.score > 60 ? "positive" : props.review.score > 39 ? "mixed" : "negative";
 
   return (
     <div className="review pad_top2 pad_btm2">

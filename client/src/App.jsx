@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import 'normalize.css';
 
 import ReviewList from './components/ReviewList.jsx';
 import Metascore from './components/Metascore.jsx';
@@ -27,4 +25,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("metascore"));
+export default App;
