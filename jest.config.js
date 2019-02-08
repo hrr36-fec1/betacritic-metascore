@@ -16,6 +16,9 @@ module.exports = {
 
   // Automatically clear mock calls and instances between every test
   clearMocks: true,
+  verbose: true,
+  setupFiles: ["<rootDir>/test/setupTests.js"],
+  setupFilesAfterEnv: ['./node_modules/jest-enzyme/lib/index.js'],
 
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,
