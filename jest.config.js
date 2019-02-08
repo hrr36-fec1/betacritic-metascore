@@ -16,6 +16,9 @@ module.exports = {
 
   // Automatically clear mock calls and instances between every test
   clearMocks: true,
+  verbose: true,
+  setupFiles: ["<rootDir>/test/setupTests.js"],
+  setupFilesAfterEnv: ['./node_modules/jest-enzyme/lib/index.js'],
 
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,
@@ -76,7 +79,9 @@ module.exports = {
   // ],
 
   // A map from regular expressions to module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
+  moduleNameMapper: {
+    "\\.(css|less)$": "<rootDir>/test/mocks/css.js"
+  },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
@@ -129,7 +134,9 @@ module.exports = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: "node",
+
+  //testEnvironment: "node",
+  testEnvironment: "jsdom",
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -144,9 +151,9 @@ module.exports = {
   // ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  // testPathIgnorePatterns: [
-  //   "/node_modules/"
-  // ],
+  testPathIgnorePatterns: [
+   "/node_modules/normalize.css"
+  ],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],
