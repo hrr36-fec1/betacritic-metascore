@@ -59,6 +59,8 @@
     "eslint-plugin-react": "^7.12.4",
     "jest": "^24.1.0",
     "jest-enzyme": "^7.0.1",
+    "jsdom": "^13.2.0",
+    "jsdom-global": "^3.0.2",
     "react-test-renderer": "^16.8.1",
     "style-loader": "^0.23.1",
     "supertest": "^3.4.2",
