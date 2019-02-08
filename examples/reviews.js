@@ -5,7 +5,7 @@ const reviews = [
         "movieId": 1,
         "movieName": "The Godfather",
         "publication": "White - Sipes",
-        "score": 91,
+        "score": 91.1,
         "publishDate": "1985-02-09T21:36:10.461Z",
         "body": "Corrupti possimus dolor harum aperiam aliquid. Debitis dolore explicabo iste magnam rerum ut quibusdam debitis veniam. Aut iste necessitatibus sint quasi enim delectus ut eius.\n \rIn dolorum aperiam veniam sed qui ea deleniti ipsam. Aut labore voluptatem et voluptate. Est labore similique doloremque in optio enim voluptatem officiis animi. Similique ex iure perferendis accusamus eos.\n \rMaiores modi earum alias unde. Non maxime ut repudiandae blanditiis sunt dolores. Enim explicabo nulla ut laborum reiciendis qui. Eligendi quos quas minus qui ducimus. Aut repellendus quisquam in accusantium ut dignissimos. Provident qui optio dolore est non magnam ut inventore.",
         "author_movie": "Delores Kub_The Godfather",
