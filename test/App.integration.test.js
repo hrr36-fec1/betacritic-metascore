@@ -4,7 +4,6 @@ import { shallow } from 'enzyme';
 import App from '../client/src/App';
 import Metascore from '../client/src/components/Metascore';
 import ReviewList from '../client/src/components/ReviewList';
-import queryDataMock from './mocks/queryData.mock.js';
 
 describe('App Unit Tests', function() {
   const wrapper = shallow(<App />);
