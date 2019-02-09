@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import Metascore from '../client/src/components/Metascore';
 import ChartWrapper from '../client/src/components/ChartWrapper';
@@ -7,7 +7,7 @@ import ChartWrapper from '../client/src/components/ChartWrapper';
 import scores from '../examples/scores';
 
 describe('Metascore', () => {
-  const wrapper = mount(<Metascore scores={scores} />);
+  const wrapper = shallow(<Metascore scores={scores} />);
 
   it('should render three bar types', () => {
     expect(wrapper.find(ChartWrapper)).toHaveLength(3);
