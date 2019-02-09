@@ -6,10 +6,10 @@ module.exports = {
         "es6": true,
         "mongo": true,
     },
-//    "parser": "babel-eslint",
-//    "settings": {
-//        "import/parser": "babel-eslint",
-//    },
+    "parser": "babel-eslint",
+    "settings": {
+        "import/parser": "babel-eslint",
+    },
     "extends": "airbnb",
     "plugins": ["react", "jsx-a11y", "import"]
 };

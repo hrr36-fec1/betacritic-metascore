@@ -1,20 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ChartWrapper = (props) => {
+const ChartWrapper = ({ length, type, reviews }) => {
   const barLength = {
-    width: `${100 * props.length}%`,
+    width: `${100 * length}%`,
   };
 
   return (
     <div className="chart_wrapper">
-      <div className="chart_bg"></div>
-      <div className={`chart ${props.type}`} style={barLength}>
-        <div className={`bar ${props.type}`}></div>
+      <div className="chart_bg" />
+      <div className={`chart ${type}`} style={barLength}>
+        <div className={`bar ${type}`} />
         <div className="text oswald">
-          <div className="label fl">{props.type}:</div>
-          <div className="count fr">{props.reviews}</div>
-          <div className="clr"></div>
+          <div className="label fl">
+            {`${type}:`}
+          </div>
+          <div className="count fr">{reviews}</div>
+          <div className="clr" />
         </div>
       </div>
     </div>
@@ -24,7 +26,7 @@ const ChartWrapper = (props) => {
 export default ChartWrapper;
 
 ChartWrapper.propTypes = {
-  length: PropTypes.number,
-  reviews: PropTypes.number,
-  type: PropTypes.string,
+  length: PropTypes.number.isRequired,
+  reviews: PropTypes.number.isRequired,
+  type: PropTypes.string.isRequired,
 };
