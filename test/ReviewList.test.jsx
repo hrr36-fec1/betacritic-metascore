@@ -1,19 +1,18 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import ReviewList from '../client/src/components/ReviewList.jsx';
-import ReviewListItem from '../client/src/components/ReviewListItem.jsx';
-import reviews from '../examples/reviews.js';
+import ReviewList from '../client/src/components/ReviewList';
+import ReviewListItem from '../client/src/components/ReviewListItem';
+import reviews from '../examples/reviews';
 
-describe('ReviewList', function() {
-  const wrapper = shallow(<ReviewList reviews={reviews}/>);
+describe('ReviewList', () => {
+  const wrapper = shallow(<ReviewList reviews={reviews} />);
 
-  it('should render without throwing an error', function() {
-    const element = <a href="#">Critic Reviews</a>;
-    expect(wrapper.contains(element)).toBe(true);
+  it('should render without throwing an error', () => {
+    expect(wrapper.find('.review_list')).toBeTruthy();
   });
 
-  it('should render several ReviewListItem components', function() {
+  it('should render several ReviewListItem components', () => {
     expect(wrapper.find(ReviewListItem)).toHaveLength(4);
   });
 });
