@@ -5,3 +5,6 @@
 /client/dist/*
 *.config.*
 /examples/*
+.eslintrc.js
+jest.config.js
+webpack.config.js
