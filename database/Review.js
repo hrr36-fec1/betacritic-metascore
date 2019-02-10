@@ -4,13 +4,28 @@ const db = require('./index.js'); // eslint-disable-line no-unused-vars
 mongoose.Promise = global.Promise;
 
 const reviewSchema = new mongoose.Schema({
-  author: String,
-  movieId: Number,
+  author: {
+    type: String,
+    required: true,
+  },
+  movieId: {
+    type: Number,
+    required: true,
+  },
   movieName: String,
   publication: String,
-  score: Number,
-  publishDate: Date,
-  body: String,
+  score: {
+    type: Number,
+    required: true,
+  },
+  publishDate: {
+    type: Date,
+    required: true,
+  },
+  body: {
+    type: String,
+    required: true,
+  },
   author_movie: { type: String, index: { unique: true } },
 });
 
@@ -26,6 +41,9 @@ const create = (review) => {
   return toSave.save();
 };
 
+const removeAll = () => Review.remove({});
+
 module.exports = Review;
 module.exports.search = search;
 module.exports.create = create;
+module.exports.removeAll = removeAll;
