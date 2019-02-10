@@ -296,3 +296,14 @@ a.metascore_w {
     border: 1px solid #000;
     font-weight: bold;
 }
+
+/* ON HOVER COLOR CHANGES */
+
+a:hover, .text.oswald:hover {
+  color: #fdd030;
+}
+
+.no_hover:hover {
+  color: inherit;
+}
+
