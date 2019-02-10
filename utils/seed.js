@@ -51,7 +51,7 @@ const generateReviews = async (movies) => {
 };
 
 // seed db with reviews
-parseData(path.join((`${__dirname}/../imdb-movie-list.txt`)))
+parseData(path.join((`${__dirname}/../examples/imdb-movie-list.txt`)))
   .then(movies => generateReviews(movies))
   .then(moviesReviews => moviesReviews
     .map(reviews => reviews
@@ -59,7 +59,7 @@ parseData(path.join((`${__dirname}/../imdb-movie-list.txt`)))
   .then(() => console.log('complete'))
   .catch(err => new Error(err));
 
-parseData(path.join((`${__dirname}/../imdb-movie-list.txt`)))
+parseData(path.join((`${__dirname}/../examples/imdb-movie-list.txt`)))
   .then((data) => {
     const movies = [];
     for (let i = 0; i < data.ids.length; i += 1) {

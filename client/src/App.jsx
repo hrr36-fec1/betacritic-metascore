@@ -12,14 +12,11 @@ class App extends React.Component {
       reviews: [],
       scores: [],
     };
+    this.queryData = this.queryData.bind(this);
   }
 
   componentDidMount() {
-    this.queryData();
-  }
-
-  queryData(movieId = 1) {
-    axios.get(`/api/movies/${movieId}/reviews`)
+    this.queryData()
       .then((res) => {
         const reviews = _.sortBy(res.data, 'score').reverse();
         this.setState({ reviews });
@@ -31,6 +28,11 @@ class App extends React.Component {
         this.setState({ scores });
       })
       .catch(err => console.log(err));
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  queryData(movieId = 1) {
+    return axios.get(`/api/movies/${movieId}/reviews`);
   }
 
   render() {

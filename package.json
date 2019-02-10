@@ -21,7 +21,7 @@
     "lint": "node_modules/.bin/eslint \"**/*.js*\"",
     "db:setup": "node utils/seed.js",
     "test-dev": "jest --watchAll --detectOpenHandles --forceExit",
-    "test": "NODE_ENV=testing jest"
+    "test": "NODE_ENV=testing jest --forceExit"
   },
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
@@ -29,6 +29,7 @@
     "axios": "^0.18.0",
     "babel-plugin-transform-es2015-destructuring": "^6.23.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
     "bluebird": "^3.5.3",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
@@ -51,6 +52,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "css-loader": "^2.1.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.9.1",
