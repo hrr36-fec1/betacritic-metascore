@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1549824415575" clover="3.2.0">
-  <project timestamp="1549824415575" name="All files">
-    <metrics statements="96" coveredstatements="81" conditionals="19" coveredconditionals="15" methods="23" coveredmethods="16" elements="138" coveredelements="112" complexity="0" loc="96" ncloc="96" packages="5" files="10" classes="10"/>
+<coverage generated="1549828855744" clover="3.2.0">
+  <project timestamp="1549828855744" name="All files">
+    <metrics statements="97" coveredstatements="88" conditionals="19" coveredconditionals="15" methods="23" coveredmethods="19" elements="139" coveredelements="122" complexity="0" loc="97" ncloc="97" packages="5" files="10" classes="10"/>
     <package name="client.src">
-      <metrics statements="16" coveredstatements="8" conditionals="5" coveredconditionals="4" methods="8" coveredmethods="3"/>
+      <metrics statements="17" coveredstatements="15" conditionals="5" coveredconditionals="4" methods="8" coveredmethods="6"/>
       <file name="App.jsx" path="/home/tyler/hackreactor/hrr36-fec-tyler-widget/client/src/App.jsx">
-        <metrics statements="16" coveredstatements="8" conditionals="5" coveredconditionals="4" methods="8" coveredmethods="3"/>
+        <metrics statements="17" coveredstatements="15" conditionals="5" coveredconditionals="4" methods="8" coveredmethods="6"/>
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
         <line num="30" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="37" count="3" type="stmt"/>
-        <line num="38" count="3" type="stmt"/>
-        <line num="40" count="3" type="cond" truecount="4" falsecount="0"/>
-        <line num="41" count="2" type="stmt"/>
-        <line num="43" count="1" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="40" count="3" type="stmt"/>
+        <line num="42" count="3" type="cond" truecount="4" falsecount="0"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
       </file>
     </package>
     <package name="client.src.components">

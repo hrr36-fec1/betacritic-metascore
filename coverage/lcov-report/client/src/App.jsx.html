@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">47.06% </span>
+        <span class="strong">88.89% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>8/17</span>
+        <span class='fraction'>16/18</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">80% </span>
@@ -30,21 +30,21 @@
         <span class='fraction'>4/5</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">37.5% </span>
+        <span class="strong">75% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>3/8</span>
+        <span class='fraction'>6/8</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">88.24% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>8/16</span>
+        <span class='fraction'>15/17</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -98,7 +98,9 @@
 <a name='L50'></a><a href='#L50'>50</a>
 <a name='L51'></a><a href='#L51'>51</a>
 <a name='L52'></a><a href='#L52'>52</a>
-<a name='L53'></a><a href='#L53'>53</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -112,23 +114,25 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -164,25 +168,27 @@ class App extends React.Component {
       reviews: [],
       scores: [],
     };
+    this.queryData = this.queryData.bind(this);
   }
 &nbsp;
   componentDidMount() {
-    this.queryData();
-  }
-&nbsp;
-<span class="fstat-no" title="function not covered" >  qu</span>eryData(movieId = <span class="branch-0 cbranch-no" title="branch not covered" >1)</span> {
-<span class="cstat-no" title="statement not covered" >    axios.get(`/api/movies/${movieId}/reviews`)</span>
-      .then(<span class="fstat-no" title="function not covered" >(r</span>es) =&gt; {
-        const reviews = <span class="cstat-no" title="statement not covered" >_.sortBy(res.data, 'score').reverse();</span>
-<span class="cstat-no" title="statement not covered" >        this.setState({ reviews });</span>
-<span class="cstat-no" title="statement not covered" >        return res;</span>
+    this.queryData()
+      .then((res) =&gt; {
+        const reviews = _.sortBy(res.data, 'score').reverse();
+        this.setState({ reviews });
+        return res;
       })
-      .then(<span class="fstat-no" title="function not covered" >(r</span>es) =&gt; {
-        let scores = <span class="cstat-no" title="statement not covered" >res.data.map(<span class="fstat-no" title="function not covered" >re</span>view =&gt; <span class="cstat-no" title="statement not covered" >review.score)</span>;</span>
-<span class="cstat-no" title="statement not covered" >        scores = _.sortBy(scores);</span>
-<span class="cstat-no" title="statement not covered" >        this.setState({ scores });</span>
+      .then((res) =&gt; {
+        let scores = res.data.map(review =&gt; review.score);
+        scores = _.sortBy(scores);
+        this.setState({ scores });
       })
       .catch(<span class="fstat-no" title="function not covered" >er</span>r =&gt; <span class="cstat-no" title="statement not covered" >console.log(err))</span>;
+  }
+&nbsp;
+  // eslint-disable-next-line class-methods-use-this
+<span class="fstat-no" title="function not covered" >  qu</span>eryData(movieId = <span class="branch-0 cbranch-no" title="branch not covered" >1)</span> {
+<span class="cstat-no" title="statement not covered" >    return axios.get(`/api/movies/${movieId}/reviews`);</span>
   }
 &nbsp;
   render() {
@@ -208,7 +214,7 @@ export default App;
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Feb 10 2019 12:46:55 GMT-0600 (CST)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Feb 10 2019 14:00:55 GMT-0600 (CST)
 </div>
 </div>
 <script src="../../prettify.js"></script>
