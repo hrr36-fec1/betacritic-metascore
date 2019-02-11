@@ -16,7 +16,9 @@ describe('Mongoose Review Schema', () => {
 
   afterEach(() => Review.removeAll());
 
-  afterAll(done => mongoose.disconnect().then(() => done()));
+  afterAll((done) => {
+    mongoose.disconnect(done);
+});
 
   it('should save a good record', (done) => {
     Review.create(reviews.default[1])
