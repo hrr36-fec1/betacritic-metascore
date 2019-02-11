@@ -8,17 +8,13 @@ const reviews = require('../examples/reviews');
 describe('Mongoose Review Schema', () => {
   const review = reviews.default[0];
 
-  beforeAll(() => {
-    mongoose.connect('mongodb://localhost/metascore');
-  });
-
   beforeEach(() => Review.create(review));
 
   afterEach(() => Review.removeAll());
 
-  afterAll((done) => {
-    mongoose.disconnect(done);
-});
+  afterAll(async () => {
+    await mongoose.disconnect();
+  });
 
   it('should save a good record', (done) => {
     Review.create(reviews.default[1])

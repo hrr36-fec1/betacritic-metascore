@@ -11,8 +11,8 @@
     "react-dev": "webpack -d --watch",
     "lint": "node_modules/.bin/eslint \"**/*.js*\"",
     "db:setup": "node utils/seed.js",
-    "test-dev": "jest --watchAll --detectOpenHandles --forceExit",
-    "test": "NODE_ENV=testing jest --forceExit"
+    "test-dev": "jest --watchAll",
+    "test": "NODE_ENV=testing jest"
   },
   "jest": {
     "transform": {
