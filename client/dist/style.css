@@ -16,6 +16,14 @@ a:visited {
   color: inherit;
 }
 
+button {
+  padding-top: 2px;
+}
+
+p {
+  padding: 2px;
+}
+
 /* GENERAL PURPOSE TAGS */
 .oswald {
   font-family: 'Oswald',"proxima_nova","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -264,6 +272,24 @@ a.metascore_w {
     font-weight: bold;
 }
 
+.summary {
+  overflow: hidden;
+  line-height: 1.2em;
+  height: 3.6em;
+}
+
+.summary.collapsed{
+  overflow: hidden;
+  line-height: 1.2em;
+
+}
+
+.summary.expanded{
+  overflow: visible;
+  height: auto;
+  line-height: 1.2em;
+}
+
 /* ON HOVER COLOR CHANGES */
 
 a:hover, .oswald:hover, button:hover {
@@ -272,20 +298,4 @@ a:hover, .oswald:hover, button:hover {
 
 .no_hover:hover {
   color: inherit;
-}
-
-.summary {
-  overflow: hidden;
-  line-height: 1.2em;
-  height: 3.6em;
-}
-.summary.collapsed{
-  overflow: hidden;
-  line-height: 1.2em;
-
-}
-.summary.expanded{
-  overflow: visible;
-  height: auto;
-  line-height: 1.2em;
 }
