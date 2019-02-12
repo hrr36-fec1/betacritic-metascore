@@ -41,11 +41,8 @@ a:visited {
 }
 
 .fxdcol {
-  display: inline;
-  float: left;
   margin-left: 15px;
   margin-right: 15px;
-  vertical-align: top;
   border: 0;
   display: flex;
   flex-direction: column;
@@ -219,20 +216,12 @@ a.metascore_w {
 }
 
 .critic_reviews2 .score_wrap {
-  display: table-cell;
   vertical-align: top;
   padding-right: .8rem;
 }
 
 .metascore_w.indiv.header_size {
   font-size: 22px;
-}
-
-.metascore_w.indiv {
-  height: 1.9em;
-  width: 1.9em;
-  font-size: 15px;
-  line-height: 1.9em;
 }
 
 .critic_reviews2 .pub_wrap {
@@ -277,7 +266,7 @@ a.metascore_w {
 
 /* ON HOVER COLOR CHANGES */
 
-a:hover, .oswald:hover {
+a:hover, .oswald:hover, button:hover {
   color: #fdd030;
 }
 
@@ -285,3 +274,18 @@ a:hover, .oswald:hover {
   color: inherit;
 }
 
+.summary {
+  overflow: hidden;
+  line-height: 1.2em;
+  height: 3.6em;
+}
+.summary.collapsed{
+  overflow: hidden;
+  line-height: 1.2em;
+
+}
+.summary.expanded{
+  overflow: visible;
+  height: auto;
+  line-height: 1.2em;
+}
