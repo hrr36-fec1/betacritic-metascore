@@ -1,27 +1,7 @@
-/* RESETS */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
-{
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  text-size-adjust: none;
-}
-
 /* GENERAL STYLING */
-html {
-  font-size: 16px;
-}
-
 body {
   box-sizing: border-box;
   font-family: Helvetica,Arial,sans-serif;
-}
-
-div {
-  display: block;
 }
 
 a {
@@ -36,7 +16,7 @@ a:visited {
   color: inherit;
 }
 
-/* GENERAL */
+/* GENERAL PURPOSE TAGS */
 .oswald {
   font-family: 'Oswald',"proxima_nova","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -67,17 +47,21 @@ a:visited {
   margin-right: 15px;
   vertical-align: top;
   border: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-.gu4 .pad_btm1 {
-  padding-: 0 !important;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
+#metascore {
+  display: flex;
 }
 
 /* METASCORE */
+.metascore_charts {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .title_bump .section_title {
   font-size: 20px;
   font-weight: bold;
@@ -98,14 +82,6 @@ a:visited {
   bottom: -10px;
 }
 
-.reviews .distribution {
-  width: 100%;
-  height: 6.5rem;
-  display: flex;
-  flex-direction: row;
-  clear: both;
-  padding-top: 5px;
-}
 /* METASCORE SCORE */
 .score {
   height: 70px;
@@ -132,18 +108,17 @@ a:visited {
 
 a.metascore_w {
   color: #fff!important;
-  text-decoration: none!important;
 }
 
-.metascore_w.positive, .metascore_w.good, .metascore_w.sixtyone, .metascore_w.game.seventyfive, .metascore_w.score_favorable, .metascore_w.score_outstanding {
+.metascore_w.positive {
   background-color: #6c3;
 }
 
-.metascore_w.negative, .metascore_w.bad, .metascore_w.score_terrible, .metascore_w.score_unfavorable {
+.metascore_w.negative {
   background-color: #f00;
 }
 
-.metascore_w.mixed, .metascore_w.forty, .metascore_w.score_mixed {
+.metascore_w.mixed {
   background-color: #fc3;
 }
 
@@ -157,9 +132,6 @@ a.metascore_w {
 /* METASCORE CHARTS */
 .chart {
   position: relative;
-  z-index: 1;
-  top: 0;
-  left: 0;
   cursor: pointer;
 }
 
@@ -176,7 +148,7 @@ a.metascore_w {
 }
 
 .reviews .distribution .charts {
-  width: calc(100% - 5.5rem);
+  width: calc(100% - 5.5rem); /* this is 5.5 because of .reviews .distribution .score */
   height: 100%;
 }
 
@@ -197,21 +169,23 @@ a.metascore_w {
   box-sizing: inherit;
 }
 
-.chart .bar.positive, .chart .bar.score_favorable, .chart .bar.score_outstanding, .chart .bar.good {
+.chart .bar.positive {
   background-color: #6c3;
 }
 
-.chart .bar.mixed, .chart .bar.score_mixed {
+.chart .bar.mixed {
   background-color: #fc3;
 }
 
-.chart .bar.negative, .chart .bar.score_terrible, .chart .bar.score_unfavorable, .chart .bar.bad {
+.chart .bar.negative {
   background-color: #f00;
 }
 
 /* REVIEW LIST */
 .review_list {
   height: 70%;
+  display: flex;
+  flex-direction: column;
 }
 
 .subsection_title {
@@ -231,9 +205,13 @@ a.metascore_w {
   padding-top: 1.6rem;
 }
 
-.review {
+.review   {
   border-top: 1px solid #ccc;
-  width: 100%;
+  width: inherit;
+  height: 15%;
+  flex-direction: column;
+  flex-flow: column wrap;
+  flex-basis: 15%
 }
 
 .critic_reviews2 .head_wrap {
@@ -299,7 +277,7 @@ a.metascore_w {
 
 /* ON HOVER COLOR CHANGES */
 
-a:hover, .text.oswald:hover {
+a:hover, .oswald:hover {
   color: #fdd030;
 }
 
