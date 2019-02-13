@@ -6,6 +6,7 @@ BetaCritic is a recreation of the popular Metacritic movie rating website. BetaC
 ## Related Projects
 
   - https://github.com/hrr36-fec1/hrr36-fec-tyler-widget
+  - https://github.com/hrr36-fec1/hrr36-fec-tyler-proxy
   - https://github.com/hrr36-fec1/merary-banner-component
   - https://github.com/hrr36-fec1/hrr36-fec1-britt-widget
   - https://github.com/hrr36-fec1/hrr36-fec1-bill-widget
@@ -16,18 +17,15 @@ BetaCritic is a recreation of the popular Metacritic movie rating website. BetaC
 1. [Requirements](#requirements)
 1. [Development](#development)
 
+## Requirements
+1. This project utilizes MongoDB
+2. All of the modules necessary are in node_modules, but you can install using npm install
+
 ## Usage
 
-> Some usage instructions
-
-## Requirements
-
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
-
-## Development
+1. Use npm start to start the express server
+2. Use npm run react-dev to start the webpack service
+3. To seed the database, run node utils/seed.js
 
 ### Installing Dependencies
 
