@@ -13,8 +13,8 @@ const ReviewList = ({ reviews }) => {
   // otherwise, display 2 highest, 3 middlest, 2 lowest
   } else {
     const midpoint = Math.floor(reviews.length / 2);
-    const reviewsToDisplay = [reviews[0], reviews[1], reviews[midpoint + 1],
-      reviews[midpoint], reviews[midpoint - 1], reviews[reviews.length - 2],
+    const reviewsToDisplay = [reviews[0], reviews[1], reviews[midpoint - 1],
+      reviews[midpoint], reviews[midpoint + 1], reviews[reviews.length - 2],
       reviews[reviews.length - 1]];
     reviewListItems = reviewsToDisplay
       .map(review => <ReviewListItem review={review} key={review._id} />);
