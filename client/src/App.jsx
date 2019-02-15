@@ -26,8 +26,7 @@ class App extends React.Component {
         let scores = res.data.map(review => review.score);
         scores = _.sortBy(scores);
         this.setState({ scores });
-      })
-      .catch(err => console.log(err));
+      });
   }
 
   // eslint-disable-next-line class-methods-use-this
