@@ -43,7 +43,7 @@ class App extends React.Component {
       return <div>Loading...</div>;
     }
     return (
-      <div className="fxdcol gu4 reviews">
+      <div className="fxdcol reviews">
         <Metascore scores={scores} />
         <ReviewList reviews={reviews} />
       </div>
