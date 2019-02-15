@@ -24,13 +24,13 @@ const ReviewList = ({ reviews }) => {
       <div className="subsection_title">
         <a href="/">Critic Reviews</a>
       </div>
-      <div className="list pad_top_half pad_btm1">
+      <div className="pad_top_half">
         <div className="critic_reviews2">
           {reviewListItems}
         </div>
       </div>
-      <div className="pad_btm1">
-        <a href="/" className="see_all boxed oswald">{`SEE ALL ${reviews.length} REVIEWS`}</a>
+      <div>
+        <a href="/" className="see_all title boxed oswald">{`SEE ALL ${reviews.length} REVIEWS`}</a>
       </div>
     </div>
   );

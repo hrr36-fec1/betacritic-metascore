@@ -32,25 +32,25 @@ const ReviewListItem = ({ review }) => {
     <div className="review pad_top2 pad_btm2">
       <div className="head_wrap">
         <div className="score_wrap">
-          <div className={`metascore_w header_size movie ${reaction} indiv`}>{review.score.toFixed(0)}</div>
+          <div className={`metascore_w title header_size movie ${reaction} indiv`}>{review.score.toFixed(0)}</div>
         </div>
         <div className="pub_wrap title">
           <span>
             <a href="/">{review.publication}</a>
           </span>
-          <span className="dash"> &ndash; </span>
-          <span className="author">
+          <span> &ndash; </span>
+          <span>
             <a href="/">{review.author}</a>
           </span>
           <div className="date pad_top_half">{date}</div>
         </div>
       </div>
-      <div className="summary_wrap pad_top_half">
+      <div className="pad_top_half">
         <div className={`summary ${toggledClass}`}>
           <a href="/" className="no_hover">{summary}</a>
           <br />
         </div>
-        <button type="button" onClick={() => setExpanded(!expanded)} className="read_full">{ expanded ? 'View Less' : 'Read Full Review'}</button>
+        <button type="button" onClick={() => setExpanded(!expanded)} className="read_full title">{ expanded ? 'View Less' : 'Read Full Review'}</button>
       </div>
     </div>
   );
