@@ -1,5 +1,5 @@
 # Project Name
-BetaCritic
+## BetaCritic
 
 BetaCritic is a recreation of the popular Metacritic movie rating website. BetaCritic was created as an education project to learn more about app development and tools, including (but not limited to) React, D3, MongoDB, Express, and Jest.
 
@@ -13,11 +13,11 @@ BetaCritic is a recreation of the popular Metacritic movie rating website. BetaC
 
 ## Table of Contents
 
-1. [Usage](#Usage)
 1. [Requirements](#requirements)
-1. [Development](#development)
+1. [Usage](#Usage)
 
 ## Requirements
+
 1. This project utilizes MongoDB
 2. All of the modules necessary are in node_modules, but you can install using npm install
 
@@ -32,6 +32,5 @@ BetaCritic is a recreation of the popular Metacritic movie rating website. BetaC
 From within the root directory:
 
 ```sh
-npm install -g webpack
 npm install
 ```
