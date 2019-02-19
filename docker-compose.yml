@@ -5,6 +5,10 @@ services:
     image: mongo:latest
     ports:
       - "27017:27017"
+  mongo-seed:
+    build: ./mongo-seed
+    links:
+      - mongo
   metascore:
     container_name: app
     restart: always
@@ -17,3 +21,7 @@ services:
       - mongo
     environment:
       WAIT_HOSTS: mongo:27017
+    volumes:
+    - data-volume:/data/db
+volumes:
+  data-volume:
