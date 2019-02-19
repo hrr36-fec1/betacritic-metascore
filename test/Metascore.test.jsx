@@ -40,7 +40,6 @@ describe('Metascore', () => {
 
   it('should render negative average score', () => {
     const negWrapper = shallow(<Metascore scores={scores.negScores} />);
-    console.log(negWrapper.find('.metascore_w'))
     expect(negWrapper.find('.metascore_w.negative')).toHaveLength(1);
   });
 });
