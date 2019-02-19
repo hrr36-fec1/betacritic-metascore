@@ -8,4 +8,4 @@ EXPOSE 4444
 ## MongoDB is very slow to start up, so we force a wait...
 ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /wait
 RUN chmod +x /wait
-CMD /wait && npm start
+CMD /wait && node server/index.js
