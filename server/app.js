@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(`${__dirname}/../client/dist`)));
 
 app.get('/api/movies/:movieId/reviews', (req, res) => {
+  console.log('request received');
   Review.search(req.params.movieId)
     .then(data => res.json(data));
 });
