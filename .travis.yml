@@ -14,7 +14,7 @@ before_install:
   - sudo service mysql stop
 
 install:
-  - npm test
+  - npm build
 
 script:
-  - NODE_ENV=dev jest
+  - npm test
