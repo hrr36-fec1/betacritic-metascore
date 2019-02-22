@@ -1,7 +1,8 @@
 /* GENERAL STYLING */
-body {
+body, #metascore {
   box-sizing: border-box;
   font-family: Helvetica,Arial,sans-serif;
+  font-size: 16px;
   color: #000;
 }
 
@@ -150,7 +151,7 @@ a.metascore_w {
 
 .reviews .distribution .charts {
   width: calc(100% - 5.5rem); /* this is 5.5 because of .reviews .distribution .score */
-  height: 100%;
+  height: 70px;
 }
 
 .chart_wrapper {
