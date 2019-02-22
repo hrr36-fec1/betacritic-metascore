@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import _ from 'underscore';
 
 import ChartWrapper from './ChartWrapper';
+import styles from '../style.module.css';
 
 const Metascore = ({ scores }) => {
   // calculate the number of positive, negative, mixed reviews
@@ -41,24 +42,23 @@ const Metascore = ({ scores }) => {
   }
 
   return (
-    <div className="metascore_charts">
-      <div className="title title_bump pad_btm1 oswald">
-        <div className="section_title">
+    <div className={`${styles.metascore_charts}`}>
+      <div className={`${styles.title} ${styles.title_bump} ${styles.pad_btm1} ${styles.oswald}`}>
+        <div className={`${styles.section_title}`}>
           <a href="/">Metascore</a>
         </div>
       </div>
-      <div className="distribution">
-        <div className="score fl">
+      <div className={`${styles.distribution}`}>
+        <div className={`${styles.score} ${styles.fl}`}>
           <a href="/" className="">
-            <div className={`metascore_w title larger movie ${avgRating}`}>{avgScore}</div>
+            <div className={`${styles.metascore_w} ${styles.title} ${styles.larger} ${styles.movie} ${styles[avgRating]}`}>{avgScore}</div>
           </a>
         </div>
-        <div className="charts fl">
+        <div className={`${styles.charts} ${styles.fl}`}>
           <ChartWrapper type="positive" length={normalizeLengths.positive} reviews={scoresCategory.positive} />
           <ChartWrapper type="mixed" length={normalizeLengths.mixed} reviews={scoresCategory.mixed} />
           <ChartWrapper type="negative" length={normalizeLengths.negative} reviews={scoresCategory.negative} />
         </div>
-        <div className="clr" />
       </div>
     </div>
   );
