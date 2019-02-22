@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import ReviewListItem from './ReviewListItem';
+import styles from '../style.module.css';
 
 const ReviewList = ({ reviews }) => {
   // display only 7 reviews
@@ -20,17 +21,17 @@ const ReviewList = ({ reviews }) => {
       .map(review => <ReviewListItem review={review} key={review._id} />);
   }
   return (
-    <div className="review_list">
-      <div className="subsection_title">
+    <div className={`${styles.review_list}`}>
+      <div className={`${styles.subsection_title}`}>
         <a href="/">Critic Reviews</a>
       </div>
-      <div className="pad_top_half">
-        <div className="critic_reviews2">
+      <div className={`${styles.pad_top_half}`}>
+        <div className={`${styles.critic_reviews2}`}>
           {reviewListItems}
         </div>
       </div>
       <div>
-        <a href="/" className="see_all title boxed oswald">{`SEE ALL ${reviews.length} REVIEWS`}</a>
+        <a href="/" className={`${styles.see_all} ${styles.title} ${styles.boxed} ${styles.oswald}`}>{`SEE ALL ${reviews.length} REVIEWS`}</a>
       </div>
     </div>
   );

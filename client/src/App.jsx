@@ -4,6 +4,7 @@ import _ from 'underscore';
 
 import ReviewList from './components/ReviewList';
 import Metascore from './components/Metascore';
+import styles from './style.module.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -37,12 +38,11 @@ class App extends React.Component {
   render() {
     const { scores } = this.state;
     const { reviews } = this.state;
-
     if (scores.length === 0 || reviews.length === 0) {
       return <div>Loading...</div>;
     }
     return (
-      <div className="fxdcol reviews">
+      <div className={`${styles.fxdcol} ${styles.reviews}`}>
         <Metascore scores={scores} />
         <ReviewList reviews={reviews} />
       </div>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+import styles from '../style.module.css';
+
 const ReviewListItem = ({ review }) => {
   // format date
   const options = { month: 'short', day: 'numeric', year: 'numeric' };
@@ -29,12 +31,12 @@ const ReviewListItem = ({ review }) => {
   const toggledClass = expanded ? 'expanded' : 'collapsed';
 
   return (
-    <div className="review pad_top2 pad_btm2">
-      <div className="head_wrap">
-        <div className="score_wrap">
-          <div className={`metascore_w title header_size movie ${reaction} indiv`}>{review.score.toFixed(0)}</div>
+    <div className={`${styles.review} ${styles.pad_top2} ${styles.pad_btm2}`}>
+      <div className={`${styles.head_wrap}`}>
+        <div className={`${styles.score_wrap}`}>
+          <div className={`${styles.metascore_w} ${styles.title} ${styles.header_size} ${styles.movie} ${styles[reaction]} indiv`}>{review.score.toFixed(0)}</div>
         </div>
-        <div className="pub_wrap title">
+        <div className={`${styles.pub_wrap} ${styles.title}`}>
           <span>
             <a href="/">{review.publication}</a>
           </span>
@@ -42,15 +44,15 @@ const ReviewListItem = ({ review }) => {
           <span>
             <a href="/">{review.author}</a>
           </span>
-          <div className="date pad_top_half">{date}</div>
+          <div className={`${styles.date} ${styles.pad_top_half}`}>{date}</div>
         </div>
       </div>
-      <div className="pad_top_half">
-        <div className={`review-summary ${toggledClass}`}>
-          <a href="/" className="no_hover">{summary}</a>
+      <div className={`${styles.pad_top_half}`}>
+        <div className={`${styles['review-summary']} ${styles[toggledClass]}`}>
+          <a href="/" className={`${styles.no_hover}`}>{summary}</a>
           <br />
         </div>
-        <button type="button" onClick={() => setExpanded(!expanded)} className="read_full title">{ expanded ? 'View Less' : 'Read Full Review'}</button>
+        <button type="button" onClick={() => setExpanded(!expanded)} className={`${styles.read_full} ${styles.title}`}>{ expanded ? 'View Less' : 'Read Full Review'}</button>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from '../style.module.css';
 
 const ChartWrapper = ({ length, type, reviews }) => {
   const barLength = {
@@ -7,16 +8,15 @@ const ChartWrapper = ({ length, type, reviews }) => {
   };
 
   return (
-    <div className="chart_wrapper">
-      <div className="chart_bg" />
-      <div className={`chart ${type}`} style={barLength}>
-        <div className={`bar ${type}`} />
-        <div className="text oswald">
-          <div className="fl">
+    <div className={`${styles.chart_wrapper}`}>
+      <div className={`${styles.chart_bg}`} />
+      <div className={`${styles.chart} ${styles[type]}`} style={barLength}>
+        <div className={`${styles.bar} ${styles[type]}`} />
+        <div className={`${styles.text} ${styles.oswald}`}>
+          <div className={`${styles.fl}`}>
             {`${type}:`}
           </div>
-          <div className="fr">{reviews}</div>
-          <div className="clr" />
+          <div className={`${styles.fr}`}>{reviews}</div>
         </div>
       </div>
     </div>
