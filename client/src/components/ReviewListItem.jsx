@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from '../style.module.css';
 
-const ReviewListItem = ({ review }) => {
+const ReviewListItem = ({ review, type }) => {
   // format date
   const options = { month: 'short', day: 'numeric', year: 'numeric' };
   const date = new Date(review.publishDate).toLocaleDateString('en-US', options);
@@ -34,7 +34,7 @@ const ReviewListItem = ({ review }) => {
     <div className={`${styles.review} ${styles.pad_top2} ${styles.pad_btm2}`}>
       <div className={`${styles.head_wrap}`}>
         <div className={`${styles.score_wrap}`}>
-          <div className={`${styles.metascore_w} ${styles.title} ${styles.header_size} ${styles.movie} ${styles[reaction]} indiv`}>{review.score.toFixed(0)}</div>
+          <div className={`${styles.metascore_w} ${(type === 'user') ? styles.user_review : ''} ${styles.title} ${styles.header_size} ${styles.movie} ${styles[reaction]} indiv`}>{review.score.toFixed(0)}</div>
         </div>
         <div className={`${styles.pub_wrap} ${styles.title}`}>
           <span>

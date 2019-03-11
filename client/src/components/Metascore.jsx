@@ -5,7 +5,7 @@ import _ from 'underscore';
 import ChartWrapper from './ChartWrapper';
 import styles from '../style.module.css';
 
-const Metascore = ({ scores }) => {
+const Metascore = ({ scores, type }) => {
   // calculate the number of positive, negative, mixed reviews
   const scoresCategory = { positive: 0, mixed: 0, negative: 0 };
   scores.forEach((score) => {
@@ -45,13 +45,13 @@ const Metascore = ({ scores }) => {
     <div className={`${styles.metascore_charts}`}>
       <div className={`${styles.title} ${styles.title_bump} ${styles.pad_btm1} ${styles.oswald}`}>
         <div className={`${styles.section_title}`}>
-          <a href="/">Metascore</a>
+          <a href="/">{type === 'critic' ? 'Metascore' : 'User Score'}</a>
         </div>
       </div>
       <div className={`${styles.distribution}`}>
         <div className={`${styles.score} ${styles.fl}`}>
           <a href="/" className="">
-            <div className={`${styles.metascore_w} ${styles.title} ${styles.larger} ${styles.movie} ${styles[avgRating]}`}>{avgScore}</div>
+            <div className={`${styles.metascore_w} ${(type === 'user') ? styles.user_review : ''} ${styles.title} ${styles.larger} ${styles.movie} ${styles[avgRating]}`}>{avgScore}</div>
           </a>
         </div>
         <div className={`${styles.charts} ${styles.fl}`}>
