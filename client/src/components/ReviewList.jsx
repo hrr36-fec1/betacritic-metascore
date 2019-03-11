@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import ReviewListItem from './ReviewListItem';
 import styles from '../style.module.css';
 
-const ReviewList = ({ reviews }) => {
+const ReviewList = ({ reviews, type }) => {
   // display only 7 reviews
   // if less than 7 reviews, display what we have
   let reviewListItems;
@@ -18,12 +18,12 @@ const ReviewList = ({ reviews }) => {
       reviews[midpoint], reviews[midpoint + 1], reviews[reviews.length - 2],
       reviews[reviews.length - 1]];
     reviewListItems = reviewsToDisplay
-      .map(review => <ReviewListItem review={review} key={review._id} />);
+      .map(review => <ReviewListItem review={review} key={review._id} type={type}/>);
   }
   return (
     <div className={`${styles.review_list}`}>
       <div className={`${styles.subsection_title}`}>
-        <a href="/">Critic Reviews</a>
+        <a href="/">{type === 'user' ? 'UserReviews' : 'Critic Reviews'}</a>
       </div>
       <div className={`${styles.pad_top_half}`}>
         <div className={`${styles.critic_reviews2}`}>

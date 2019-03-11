@@ -3,7 +3,7 @@ services:
   backend:
     build: 
       context: ../
-      dockerfile: docker/Dockerfile.production 
+      dockerfile: docker/Dockerfile.node 
       args:
         port: ${PORT}
     env_file:

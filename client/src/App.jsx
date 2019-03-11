@@ -42,9 +42,15 @@ class App extends React.Component {
       return <div>Loading...</div>;
     }
     return (
-      <div className={`${styles.fxdcol} ${styles.reviews}`}>
-        <Metascore scores={scores} />
-        <ReviewList reviews={reviews} />
+      <div className={styles.container}>
+        <div className={`${styles.fxdcol} ${styles.reviews}`}>
+          <Metascore scores={scores} type="critic" />
+          <ReviewList reviews={reviews} type="critic" />
+        </div>
+        <div className={`${styles.fxdcol} ${styles.reviews}`}>
+          <Metascore scores={scores} type="user" />
+          <ReviewList reviews={reviews} type="user" />
+        </div>
       </div>
     );
   }

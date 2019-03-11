@@ -26,6 +26,10 @@ p {
   padding: 2px;
 }
 
+.container {
+  display: flex;
+}
+
 /* GENERAL PURPOSE TAGS */
 .oswald {
   font-family: 'Oswald',"proxima_nova","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -114,6 +118,10 @@ p {
   line-height: 2em;
   font-size: 17px;
   border-radius: 6px;
+}
+
+.user_review {
+  border-radius: 100%;
 }
 
 .reviews .distribution .score {
