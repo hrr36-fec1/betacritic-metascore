@@ -17,10 +17,10 @@ describe('App Unit Tests', () => {
   const wrapper = shallow(<App />);
 
   it('Should render a Metascore component', () => {
-    expect(wrapper.find(Metascore)).toHaveLength(1);
+    expect(wrapper.find(Metascore)).toHaveLength(2);
   });
 
   it('Should render a ReviewList component', () => {
-    expect(wrapper.find(ReviewList)).toHaveLength(1);
+    expect(wrapper.find(ReviewList)).toHaveLength(2);
   });
 });
