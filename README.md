@@ -12,9 +12,13 @@ This project utilizes MongoDB, Node, and npm.
 
 ## Usage - Dev
 1. Install dependencies with ```npm install```
-1. Use npm start to start the express server
-2. Use npm run react-dev to start the webpack service
-3. To seed the database, run node utils/seed.js
+1. Use ```npm run start-dev``` to start the express server
+2. Use ```npm run react-dev```n to build bundle.js
+3. To seed the database, run ```npm run db:setup```
+4. Visit http://127.0.0.1:4444 to see the service.
 
 ## Usage - Production
 1. Use ```npm run production``` and ```npm run build``` which will create a docker image and run it in a container utilizing the docker-compose files in the /docker folder.
+
+## In Action
+![A gif of this app in action](https://i.imgur.com/dbH6zij.gif)
