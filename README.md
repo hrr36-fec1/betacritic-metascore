@@ -23,4 +23,4 @@ This project utilizes MongoDB, Node, and npm, and docker. The instructions below
 1. Use ```npm run production``` and ```npm run build``` which will create a docker image and run it in a container utilizing the docker-compose files in the /docker folder.
 
 ## In Action
-![A gif of this app in action](https://i.imgur.com/dbH6zij.gif)
+![A gif of this app in action](https://imgur.com/a/ZVuld36)
