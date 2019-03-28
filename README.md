@@ -1,14 +1,16 @@
-# Project Name
-## BetaCritic
+# BetaCritic
+## Introduction
+Betacritic is an online media review aggregator. This particular component aggregates critic and user reviews, and displays/organizes them in an intuitive and visually helpful way.
 
-BetaCritic is a recreation of the popular Metacritic movie rating website. BetaCritic was created as an education project to learn more about app development and tools, including (but not limited to) React, MongoDB, Express, Jest, and Styled Components.
+The _technologies_ used for development were primarily: React, MongoDB, Express, Jest, and Styled Components.
+For _deployment_, I used Docker (docker-compose) and deployed the service to EC2 database to mLab.
 
 ## Related Projects
-See the related component and proxy repos here.
+See the components built by the rest of my team, as well as the proxy service that hosted all of the components on a single web page, in this github organization:
   - https://github.com/hrr36-fec1/
  
 ## Requirements
-This project utilizes MongoDB, Node, and npm.
+This project utilizes MongoDB, Node, and npm, and docker. The instructions below explain how to install and run the additional dependencies.
 
 ## Usage - Dev
 1. Install dependencies with ```npm install```
